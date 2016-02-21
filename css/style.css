@@ -1,0 +1,202 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body{
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  background-color: #FEFCFB;
+  color: #001F54;
+}
+
+header {
+
+  padding: 200px 0 200px 0;
+background-image: url(../images/header_sky.jpg);
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+color: #FEFCFB;
+text-transform: uppercase;
+font-size: 24px;
+}
+
+nav {
+  padding: 20px 0 20px 0;
+  background-color: #7A8B93;
+}
+
+nav a {
+  text-transform: uppercase;
+  font-weight: 700;
+   color: #ADB6BA;
+   text-decoration: none;
+   padding: 0 20px 0 20px;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #0A1128;
+}
+
+#nav
+{
+    /* container */
+}
+    #nav > a
+    {
+        display: none;
+    }
+    #nav li
+    {
+        display: inline;
+        margin: 0 auto;
+
+    }
+
+    /* first level */
+
+    #nav > ul
+    {
+      display: inline;
+      margin: 0 auto;
+    }
+
+
+    /* second level */
+
+    #nav li ul
+    {
+        display: none;
+        position: absolute;
+        top: 100%;
+    }
+        #nav li:hover ul
+        {
+            display: block;
+        }
+
+
+section {
+  max-width: 720px;
+  margin: 0 auto 0 auto;
+  padding: 0;
+}
+
+img {
+  display: block;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;}
+
+
+
+h2 {
+  font-size: 35px;
+  margin-top: 50px;
+  text-transform: uppercase;
+  color: #7A8B93;
+}
+
+
+h3 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #ADB6BA;
+}
+
+p {
+  margin-bottom:20px;
+}
+
+
+
+footer {
+  padding: 30px 0;
+}
+
+small {
+
+display:block;
+margin-top: 20px;
+  font-size: 10px;
+}
+
+
+@media screen and (max-width: 720px) {
+  img, iframe {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+  padding: 100px 20px;
+}
+
+nav a {
+  display: block;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+p {
+font-size: 14px;
+}
+
+
+}
+
+@media only screen and ( max-width: 720px )
+{
+    #nav
+    {
+        position: relative;
+        padding: 10px 0;
+    }
+        #nav > a
+        {
+          position: relative;
+          font-size: 20px;
+        }
+        #nav:not( :target ) > a:first-of-type,
+        #nav:target > a:last-of-type
+        {
+            display: inline;
+        }
+
+    /* first level */
+
+    #nav > ul
+    {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+        #nav:target > ul
+        {
+            display: block;
+            background-color: #7A8B93;
+        }
+        #nav > ul > li
+        {
+            width: 100%;
+            float: none;
+        }
+
+    /* second level */
+
+    #nav li ul
+    {
+        position: static;
+    }
+
+    $( '#nav li:has(ul)' ).doubleTapToGo();
+}
